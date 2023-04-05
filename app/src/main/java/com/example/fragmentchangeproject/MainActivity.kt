@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ///setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -23,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonSecondFragment.setOnClickListener {
-//            val fragmentTransaction = fragmentManager.beginTransaction()
-//            fragmentTransaction.add(R.id.frameLayout, SecondFragment())
-//            fragmentTransaction.addToBackStack(null)
-//            fragmentTransaction.commit()
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.add(R.id.frameLayout, SecondFragment())
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
 
     }
