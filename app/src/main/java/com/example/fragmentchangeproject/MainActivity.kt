@@ -6,7 +6,7 @@ import com.example.fragmentchangeproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    //private val fragmentManager = supportFragmentManager
+    private val fragmentManager = supportFragmentManager
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonFirstFragment.setOnClickListener {
-//            val fragmentTransaction = fragmentManager.beginTransaction()
-//            fragmentTransaction.add(R.id.frameLayout, FirstFragment())
-//            fragmentTransaction.addToBackStack(null)
-//            fragmentTransaction.commit()
+           val fragmentTransaction = fragmentManager.beginTransaction()
+           fragmentTransaction.add(R.id.frameLayout, FirstFragment())
+            fragmentTransaction.addToBackStack(null)
+           fragmentTransaction.commit()
         }
 
         binding.buttonSecondFragment.setOnClickListener {
