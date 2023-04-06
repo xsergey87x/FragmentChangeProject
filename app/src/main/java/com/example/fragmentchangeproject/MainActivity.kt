@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonFirstFragment.setOnClickListener {
-           val fragmentTransaction = fragmentManager.beginTransaction()
-           fragmentTransaction.add(R.id.frameLayout, FirstFragment())
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.add(R.id.frameLayout, FirstFragment())
             fragmentTransaction.addToBackStack(null)
-           fragmentTransaction.commit()
+            fragmentTransaction.commit()
         }
 
         binding.buttonSecondFragment.setOnClickListener {
